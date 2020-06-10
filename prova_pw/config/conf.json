@@ -1,0 +1,12 @@
+{
+
+        "url": "mongodb://localhost:27017",
+        "db": "myBlog",
+        "colls": {
+            "users": "users",
+            "sequences": "sequences",
+              "posts":"posts"
+
+
+        }
+}
