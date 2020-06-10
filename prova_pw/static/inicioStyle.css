@@ -1,0 +1,8 @@
+.main_hor_size{
+  background-color: rgba(6, 79, 84, 0.5);
+  width:90%;
+}
+
+.site_color{
+    background-image: linear-gradient(to bottom right, rgb(6, 79, 84), white);
+}
