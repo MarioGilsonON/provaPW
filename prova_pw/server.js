@@ -20,7 +20,7 @@ app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
 app.set('views', path.resolve(__dirname, 'views'));
 app.use('/static', express.static(path.join(__dirname, 'static')));
-
+app.use('/scripts', express.static(path.join(__dirname, 'scripts')));
 app.use(bodyParser.urlencoded({extended: true}));
 
 function authenticate(req, res, next) {
@@ -44,12 +44,33 @@ let exitHandler = (code) => {
 process.once('SIGINT', exitHandler);
 process.once('SIGUSR2', exitHandler);
 
-let img="images";
+
 //routes
-app.get('/user/:name', (req,res)=>{
+app.get('/', (req,res)=>{
     res.render('inicio', {
-      title:"Handlebars test",
-      name:req.params.name,
-      imagem:img
+      title:"Início",
+      name:req.params.name
+    });
+});
+app.get('/inicio', (req,res)=>{
+    res.render('inicio', {
+      title:"Início",
+      name:req.params.name
+    });
+});
+
+var postID="a0001";
+app.get('/login', (req,res)=>{
+   res.render('login', {
+     title:"Login",
+     style:"allStyle"
+
+   });
+});
+app.get('/posts', (req,res)=>{
+    res.render('posts_list', {
+      title:"Posts",
+      style:"allStyle",
+      post_id:postID
     });
 });
