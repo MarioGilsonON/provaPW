@@ -1,0 +1,26 @@
+<main>
+  <div id="pagPosts-nav">
+    <div id="main-nav"class="mx-auto p-2 main_hor_size text-light">
+        <div class=" h-100">
+
+          <form action="/submeterPostagem" method="post">
+            <div class="form-group">
+              <label for="exampleFormControlFile1">Selecione a imagem da postagem: </label>
+              <input type="file" class="form-control-file" name="img" id="img_post">
+            </div>
+
+
+<label for="post_title" class="text-white">Título da postagem: </label>
+          <input id="post_title" class="form-control text-info" type="text" name="title"  placeholder="Default input">
+          <div  class="form-group"><br>
+
+    <label for="post_content"  class="text-white" >Conteúdo: </label>
+    <textarea  id="post_content" name="content" class="form-control text-info" id="" rows="3"></textarea>
+  </div>
+  <button type="submit" class="btn btn-success">Submeter</button>
+</form>
+
+        </div>
+    </div>
+  </div>
+</main>

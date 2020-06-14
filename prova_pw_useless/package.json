@@ -1,0 +1,19 @@
+{
+  "name": "prova_pw",
+  "version": "1.0.0",
+  "description": "Prova da disciplina de Programacao para Web",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarioGilsonON/provaPW.git"
+  },
+  "author": "Mario Gilson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarioGilsonON/provaPW/issues"
+  },
+  "homepage": "https://github.com/MarioGilsonON/provaPW#readme"
+}

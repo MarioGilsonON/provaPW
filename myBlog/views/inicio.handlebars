@@ -1,0 +1,11 @@
+<main>
+  <div id="main-nav"class="mx-auto p-2 main_hor_size text-light">
+    {{> log_in_out}}
+{{#if session.authenticated}}
+<h1 style="margin-left:20px;"> Olá, seja bem vindo {{user.name}}!</h1>
+  </div>
+{{else}}
+<h1 style="margin-left:20px;"> Olá, seja bem vindo!</h1>
+  </div>
+{{/if}}
+</main>
