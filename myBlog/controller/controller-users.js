@@ -36,13 +36,19 @@ exports.fazlogin = (req, res) => {
                     (err, matched) => {
                         if (matched) {
                             req.session.authenticated = true;
-                                if(req.session.authenticated === true){
-                                  console.log("TA SUPER LOGADO");
-                                res.render('inicio', {user:emailuser});
-                                 }
-                                else {console.log("NAUM LOGGED");}
+                            req.session.flash = {
+                              type:'login',
+                              name:emailuser.name
+                            }
+                            req.session.username = {
+                              type:"autocomplete",
+                              author:emailuser.name,
+                              location:emailuser.location
+                            }
+                              res.render('inicio', {user:emailuser});
+
                         } else{
-                          console.log("NÃO LOGADO");
+                          console.log("Erro no login ... ");
                         }
                       });
                     }
@@ -53,7 +59,6 @@ exports.fazlogin = (req, res) => {
 
 exports.logout = (req, res) => {
     if (req.session.authenticated) {
-      if(req.session.authenticated){ console.log(" LOGADO SIM");}else{console.log("LOGADO NAO");}
         req.session.authenticated = false;
         req.session.flash = {
             type: 'logout'

@@ -11,9 +11,18 @@
 
 
 <label for="post_title" class="text-white">Título da postagem: </label>
-          <input id="post_title" class="form-control text-info" type="text" name="title"  placeholder="Default input">
+          <input id="post_title" class="form-control text-info" type="text" name="title"  >
           <div  class="form-group"><br>
+            {{#if (equals username.type "autocomplete")}}
+            <label for="post_title" class="text-white">Autor: </label>
+                      <input id="post_title" class="form-control text-info" type="text" name="author"  Value={{username.author}}>
+                      <div  class="form-group"><br>
 
+            <label for="post_title" class="text-white">Local da postagem: </label>
+                      <input id="post_title" class="form-control text-info" type="text" name="location"  value={{username.location}} placeholder="Default input">
+                      <div  class="form-group"><br>
+
+                        {{/if}}
     <label for="post_content"  class="text-white" >Conteúdo: </label>
     <textarea  id="post_content" name="content" class="form-control text-info" id="" rows="3"></textarea>
   </div>

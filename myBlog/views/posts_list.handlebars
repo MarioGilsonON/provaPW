@@ -6,9 +6,7 @@
     <div id="main-nav"class="mx-auto p-2 main_hor_size text-light" style="overflow-y: scroll;" >
 {{> log_in_out}}
       <div id="accordion">
-{{#if session.authenticated}} <a href="/fazerPostagem"  class="btn btn-lg btn-warning" >Fazer Postagem</a>
- {{else}} <a href="/fazerPostagem"  class="btn btn-lg btn-warning" data-toggle="popover" title="Popover title" data-content="Faça Login para acessar este recurso" disabled>Fazer Postagem</a>{{/if}}
-
+ <a href="/fazerPostagem"  class="btn btn-lg btn-warning" >Fazer Postagem</a>
 
       <!-- ==========================POST========================== -->
  {{#each post as |post|}}
@@ -23,7 +21,7 @@
 
               <div id="post_collapse_{{post.id}}" class="collapse hidden bg-img-post " style="background-image: url('../static/img/{{post.img}}');" aria-labelledby="headingOne" data-parent="#accordion">
                 <div id="{{post.id}}" class="card-body hover_content">
-                    <small>Postado por {{post.author}} em 10/06/2020 - de São Bernardo do Campo - SP</small>
+                    <small>Postado por {{post.author}} em {{post.location}}</small>
                     <p> {{post.content}} </p>
                 </div>
             </div>

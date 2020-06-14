@@ -65,6 +65,7 @@ process.once('SIGUSR2', exitHandler);
 
 app.use((req, res, next) => {
     res.locals.session = req.session;
+    res.locals.username = req.session.username;
     res.locals.flash = req.session.flash;
     delete req.session.flash;
     next();
@@ -81,8 +82,7 @@ app.get('/', (req,res)=>{
 
 app.get('/fazerPostagem', authenticate, (req,res)=>{
     res.render('fazPost', {
-      title:"Poste algo",
-      style:"allStyle"
+      title:"Novo post"
     });
 });
 

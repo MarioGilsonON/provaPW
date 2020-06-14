@@ -7,12 +7,13 @@ const colls = require("../config/dbconnect.js").colls;
 
 //_________________Definições_________________________
 
-function Posts(title, img, content, author){
+function Posts(title, img, content, author, location){
   this.id=null;
   this.title=title;
   this.img=img;
   this.content=content;
   this.author=author;
+  this.location=location;
 }
 
 const PostsDAO = {};
@@ -56,6 +57,7 @@ PostsDAO.toObj = function(doc) {
     post.img = doc.img;
     post.content = doc.content;
     post.author = doc.author;
+    post.location = doc.location;
 
     return post;
 }
@@ -67,6 +69,7 @@ PostsDAO.toDoc = function(post) {
         img: post.img,
         content: post.content,
         author: post.author,
+        location:post.location
     }
 }
 

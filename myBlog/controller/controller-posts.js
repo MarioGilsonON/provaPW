@@ -13,7 +13,7 @@ exports.insert = (req,res)=>{
     console.log(req.body);
         dbconnection.disconnect();
         });
-    });
+    }); res.redirect('/');
 }
 
 
