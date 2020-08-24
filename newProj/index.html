@@ -1,0 +1,105 @@
+<html>
+
+<head>
+
+    <style>
+        h1,
+        h2 {
+            transform: rotate(15deg);
+            text-align: center;
+            animation: fade 0.5s infinite;
+        }
+body{
+    margin: 0px;
+}
+        header {
+
+            text-align: center;
+            font-size: 30px;
+            
+            padding-top: 10px;
+            background-color: deeppink;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            display: inline;
+            margin-top: 50px;
+
+            padding: 2px;
+
+        }
+
+        header a:hover {
+
+            transform: rotate(20deg);
+            background-color: rgba(255, 255, 255, 0.6);
+            box-shadow: 2px 2px 2px 1px black;
+
+        }
+
+
+
+        @keyframes fade {
+            0% {
+                color: deeppink;
+            }
+
+            50% {
+                color: blueviolet;
+            }
+
+            100% {
+                color: deeppink;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </header>
+    <main>
+        <div>
+            <h1>Tassy</h1>
+            <h2>TE ADORO DEMAIS</h2>
+        </div>
+       <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis
+        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    </main>
+
+<form action="" method="GET">
+<select name="doces" id="id_select">
+    <option value="doce1">Doce 1</option>
+    <option value="doce2">Doce 2</option>
+    <option value="doce3">Doce 3</option>
+
+</select>
+
+
+
+<input type="submit">
+<input list="Doces">
+<datalist id="Doces" name="meu_docinho">
+    <option>Doce1</option>
+    <option>Doce2</option>
+
+</datalist>
+
+</form>
+
+
+
+</body>
+
+</html>
